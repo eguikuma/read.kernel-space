@@ -1,0 +1,16 @@
+{
+  "name": "read.kernel-space",
+  "short_name": "read.kernel-space",
+  "description": "「OS 自身がどう動いているか」を説明モデルとして学びます",
+  "start_url": "/read.kernel-space/",
+  "scope": "/read.kernel-space/",
+  "display": "standalone",
+  "background_color": "#f9fafb",
+  "theme_color": "#D97757",
+  "icons": [
+    { "src": "/read.kernel-space/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/read.kernel-space/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/read.kernel-space/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/read.kernel-space/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

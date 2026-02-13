@@ -2,10 +2,13 @@
 *.md
 ![0-9][0-9]-*.md
 !appendices/*.md
+!index.md
 !README.md
 
 # 隠しファイル
 .*
 !.ci
 !.ci/*
+!.github
+!.github/**
 !.gitignore

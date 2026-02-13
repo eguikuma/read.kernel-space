@@ -1,0 +1,42 @@
+name: デプロイ
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: チェックアウトする
+        uses: actions/checkout@v4
+
+      - name: GitHub Pagesのセットアップをする
+        uses: actions/configure-pages@v5
+
+      - name: Jekyllでビルドする
+        uses: actions/jekyll-build-pages@v1
+
+      - name: ビルド成果物をアップロードする
+        uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: GitHub Pagesへデプロイする
+        id: deployment
+        uses: actions/deploy-pages@v4

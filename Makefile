@@ -28,12 +28,12 @@ build:
 ## 継続的インテグレーション (CI)
 ##
 ## prettier
-## ─── Markdown、JSON などを整形します
+## ─── Markdown、HTML、CSS、YAML、JSON を整形します
 ## textlint
 ## ─── Markdown の文章の品質を確認します
 ##
 ci:
 	@docker run --rm --user $$(id -u):$$(id -g) -v $(PWD):/app $(CI_IMAGE) sh -c '\
-		prettier --write "**/*.md" "**/*.json" --ignore-path .gitignore'
+		prettier --write "**/*.md" "**/*.html" "**/*.css" "**/*.yml" "**/*.json" --ignore-path .gitignore'
 	@docker run --rm --user $$(id -u):$$(id -g) -v $(PWD):/app $(CI_IMAGE) sh -c '\
 		textlint --rulesdir .ci/textlint-rules -c .ci/.textlintrc.json --ignore-path .ci/.textlintignore "**/*.md"'

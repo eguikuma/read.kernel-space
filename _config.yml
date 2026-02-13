@@ -1,0 +1,11 @@
+title: read.kernel-space
+description: 「OS 自身がどう動いているか」を説明モデルとして学びます
+baseurl: /read.kernel-space
+url: https://eguikuma.github.io
+markdown: kramdown
+permalink: pretty
+has_appendices: true
+
+include:
+  - manifest.webmanifest
+  - sw.js

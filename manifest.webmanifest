@@ -6,7 +6,7 @@
   "scope": "/read.kernel-space/",
   "display": "standalone",
   "background_color": "#f9fafb",
-  "theme_color": "#D97757",
+  "theme_color": "#FEFFF1",
   "icons": [
     { "src": "/read.kernel-space/icon-192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "/read.kernel-space/icon-512.png", "sizes": "512x512", "type": "image/png" },

@@ -5,7 +5,7 @@ module.exports = function (context) {
   const { Syntax, RuleError, report, getSource } = context;
 
   return {
-    [Syntax.Paragraph](node) {
+    [Syntax.Str](node) {
       const text = getSource(node);
       const match = text.indexOf("。");
       if (match !== -1) {

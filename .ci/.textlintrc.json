@@ -1,0 +1,7 @@
+{
+  "plugins": ["markdown"],
+  "rules": {
+    "no-markdown-bold-cjk": true,
+    "no-period": true
+  }
+}
